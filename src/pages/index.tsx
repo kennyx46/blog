@@ -33,7 +33,7 @@ const GridRow: any = styled.div`
     props.background
       ? `linear-gradient(
       -185deg,
-      ${rgba(darken(0.1, props.theme.colors.primary), 0.7)}, 
+      ${rgba(darken(0.1, props.theme.colors.primary), 0.7)},
       ${rgba(lighten(0.1, props.theme.colors.grey.dark), 0.9)}), url(/assets/bg.png) no-repeat`
       : null};
   background-size: cover;
@@ -48,6 +48,17 @@ const GridRow: any = styled.div`
   @media ${media.phone} {
     padding: 2rem 1.5rem;
   }
+`;
+
+const LogoImage: any = styled.div`
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  background: ${(props: any) =>
+    props.background
+      ? `linear-gradient(rgba(118, 179, 140, 0.5),rgba(118, 179, 140, 0.5)), url(/assets/me.png) no-repeat`
+      : null};
+  background-size: cover;
 `;
 
 const HomepageContent: any = styled.div`
@@ -66,12 +77,13 @@ export default class IndexPage extends React.Component<PageProps> {
           <Homepage>
             <GridRow background={true}>
               <HomepageContent center={true}>
-                <img src={config.siteLogo} />
+                {/*<img src={config.siteLogo} width={150} height={150}/>*/}
+                <LogoImage background/>
                 <h1>
                   Hi. I am <br />
-                  Majid Hajian
+                  Sergii Vorobei
                 </h1>
-                <p>I write about JavaScript, Angular, Ember, React, Vue, GlimmerJs, NodeJs, Rails, Go, Gatsby and ...</p>
+                <p>I write about JavaScript, React, React Native NodeJs, Rails, Go</p>
                 <Link to="/contact">
                   <Button big={true}>
                     <svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
@@ -94,9 +106,12 @@ export default class IndexPage extends React.Component<PageProps> {
               <HomepageContent>
                 <h2>About Me</h2>
                 <p>
-                  Though I am a results-driven front-end developer by day who have converted inactive designs to fully interactive,
-                  well-developed, accessible and standards-based user interfaces. I am completely enthusiast with a full stack environment
-                  and passionate about JavaScript world.
+                  Senior Full Stack / Tech Lead developer with more than 8 years of experience in Development.
+                  Decent expertise in Web Development with Javascript and React.
+                  Good knowledge of Backend technologies and frameworks e.g. NodeJS, Express, Ruby, Ruby on Rails, Python, Flask, Django.
+
+                  Highly responsible and well organized team member with leadership skills and strong obligation for prioritizing deadlines. Have about a year of team leading experience. Open and initiative for innovative and agile approach to development.
+                  Active participant in communications with clients, always ready to provide solutions and results in shortest terms.
                 </p>
                 <hr />
                 <h2>Latest Blog</h2>
